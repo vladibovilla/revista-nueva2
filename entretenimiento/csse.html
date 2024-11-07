@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Introducción a CSS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f1f2f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #2d3436;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            color: #2980b9;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos destacados */
+        .highlight {
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        /* Ejemplo visual de CSS */
+        .css-demo {
+            border: 2px dashed #2980b9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            background: #ecf0f1;
+            color: #34495e;
+        }
+
+        .demo-selector {
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #2980b9;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>CSS: Hojas de Estilo en Cascada</h1>
+        <h2>Domina el Estilo de tu Sitio Web</h2>
+
+        <p><span class="highlight">CSS</span> (Cascading Style Sheets) es el lenguaje que usamos para dar estilo y diseño a nuestras páginas web. A través de CSS, podemos cambiar los colores, fuentes, posicionamiento y efectos visuales de nuestros elementos HTML.</p>
+
+        <h2>Componentes Principales de CSS</h2>
+
+        <h3>1. Selectores</h3>
+        <p>Los <span class="highlight">selectores</span> en CSS indican los elementos HTML a los que queremos aplicar estilos. Algunos ejemplos comunes de selectores son:</p>
+        <div class="css-demo">
+            <p class="demo-selector">/* Selector de clase */</p>
+            <p>.miClase { color: blue; }</p>
+            <p class="demo-selector">/* Selector de ID */</p>
+            <p>#miID { background-color: yellow; }</p>
+            <p class="demo-selector">/* Selector de tipo */</p>
+            <p>p { font-size: 16px; }</p>
+        </div>
+
+        <h3>2. Propiedades y Valores</h3>
+        <p>Una <span class="highlight">propiedad</span> es el aspecto que queremos modificar (por ejemplo, `color` o `font-size`), y el <span class="highlight">valor</span> es la configuración de esa propiedad. Por ejemplo:</p>
+        <div class="css-demo">
+            <p class="demo-selector">color: red;</p>
+            <p class="demo-selector">font-size: 20px;</p>
+            <p class="demo-selector">background-color: #f1c40f;</p>
+        </div>
+
+        <h3>3. Declaraciones y Reglas</h3>
+        <p>Una <span class="highlight">declaración</span> CSS incluye una propiedad y un valor (por ejemplo, `color: red;`). Varias declaraciones agrupadas para un selector forman una <span class="highlight">regla</span>. Así es como se define un estilo en CSS:</p>
+        <div class="css-demo">
+            <p class="demo-selector">h1 {</p>
+            <p> color: #2980b9;</p>
+            <p> font-size: 2.5em;</p>
+            <p>}</p>
+        </div>
+
+        <h3>4. Comentarios</h3>
+        <p>Los comentarios se usan para hacer notas en el código CSS y no se aplican al estilo de la página. Los comentarios en CSS se escriben así:</p>
+        <div class="css-demo">
+            <p>/* Este es un comentario CSS */</p>
+        </div>
+
+        <h3>5. Métodos de Aplicación de CSS</h3>
+        <p>Existen tres formas principales de aplicar CSS en un documento HTML:</p>
+        <ul>
+            <li><span class="highlight">CSS en línea</span>: se aplica directamente en la etiqueta HTML, con el atributo `style`.</li>
+
+            <li><span class="highlight">CSS externo</span>: se vincula a un archivo CSS separado.</li>
+        </ul>
+
+        <p>Al entender estos componentes, puedes crear estilos potentes y personalizados para tus sitios web. ¡Explora y juega con los diferentes selectores y propiedades para ver los resultados en tus diseños!</p>
+
+        <a href="/index.html" class="boton">¡Descubre más sobre CSS!</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Listas de Declaraciones en CSS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #2d3436;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            color: #6c5ce7;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Resaltado */
+        .highlight {
+            color: #74b9ff;
+            font-weight: bold;
+        }
+
+        /* Listas de estilo */
+        ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "⚙️";
+            color: #6c5ce7;
+            font-weight: bold;
+            position: absolute;
+            left: -30px;
+        }
+
+        /* Ejemplo de código */
+        .ejemplo {
+            background: #dfe6e9;
+            padding: 15px;
+            border-left: 4px solid #6c5ce7;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            color: #2d3436;
+        }
+
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #6c5ce7;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Listas de Declaraciones en CSS</h1>
+        <h2>Organizando Estilos de Forma Eficiente</h2>
+
+        <p>Una <span class="highlight">lista de declaraciones</span> en CSS es el conjunto de reglas de estilo que se aplican a un elemento. Cada declaración consiste en una propiedad y un valor, separados por dos puntos <code>:</code> y terminados con un punto y coma <code>;</code>. Estas listas permiten controlar de manera precisa el aspecto de cada elemento HTML.</p>
+
+        <h2>Estructura de una Lista de Declaraciones</h2>
+        <p>Las listas de declaraciones siguen una estructura sencilla pero esencial en CSS:</p>
+
+        <div class="ejemplo">
+            <pre>
+/* Selector de etiqueta */
+p {
+    color: #6c5ce7;
+    font-size: 16px;
+    margin: 10px 0;
+}
+            </pre>
+        </div>
+
+        <p>En el ejemplo anterior, <span class="highlight">color</span>, <span class="highlight">font-size</span>, y <span class="highlight">margin</span> son propiedades, mientras que <code>#6c5ce7</code>, <code>16px</code>, y <code>10px 0</code> son sus valores. Juntos forman una lista de declaraciones para el selector <code>p</code>.</p>
+
+        <h2>Características de las Declaraciones</h2>
+        <p>Las listas de declaraciones deben cumplir ciertas características para funcionar correctamente:</p>
+
+        <ul>
+            <li>Cada propiedad debe ir seguida de dos puntos <code>:</code> y de su valor correspondiente.</li>
+            <li>Es importante finalizar cada declaración con un punto y coma <code>;</code> para evitar errores.</li>
+            <li>Las listas de declaraciones se encierran en llaves <code>{ }</code> y se aplican a uno o más selectores.</li>
+            <li>El orden de las declaraciones en una lista puede afectar el resultado visual de los estilos.</li>
+        </ul>
+
+        <h2>Ejemplo Completo</h2>
+
+        <div class="ejemplo">
+            <pre>
+/* Selector de clase */
+.titulo {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #74b9ff;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #6c5ce7;
+}
+            </pre>
+        </div>
+
+        <p>Este bloque define una lista de declaraciones para la clase <code>.titulo</code>, aplicando estilos de color, tipografía y alineación al elemento que utilice esta clase.</p>
+
+        <a href="/index.html" class="boton">Explorar más sobre CSS</a>
+    </div>
+</body>
+</html>

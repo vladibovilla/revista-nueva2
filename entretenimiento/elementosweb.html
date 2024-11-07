@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Posicionamiento en CSS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #2d3436;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            color: #0984e3;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Resaltado */
+        .highlight {
+            color: #0984e3;
+            font-weight: bold;
+        }
+
+        /* Ejemplo de posicionamiento */
+        .posicionamiento {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .caja {
+            width: 150px;
+            height: 150px;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Tipos de posicionamiento */
+        .statico {
+            background-color: #00b894;
+            position: static;
+        }
+
+        .relativo {
+            background-color: #fdcb6e;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        .absoluto {
+            background-color: #d63031;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .fijo {
+            background-color: #6c5ce7;
+            position: fixed;
+            top: 50px;
+            right: 20px;
+        }
+
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #0984e3;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Posicionamiento en CSS</h1>
+        <h2>Domina el Control de Ubicación en la Web</h2>
+
+        <p>En CSS, el <span class="highlight">posicionamiento</span> permite controlar la ubicación de los elementos en la página. Las diferentes propiedades de posicionamiento pueden crear efectos únicos y mejorar el diseño.</p>
+
+        <h2>Tipos de Posicionamiento en CSS</h2>
+
+        <p>Aquí te presentamos los tipos principales de posicionamiento:</p>
+
+        <div class="posicionamiento">
+            <div class="caja statico">static</div>
+            <div class="caja relativo">relative</div>
+            <div class="caja absoluto">absolute</div>
+        </div>
+
+        <h2>Posicionamiento Estático (static)</h2>
+        <p>Este es el <span class="highlight">valor por defecto</span> de todos los elementos. Con `static`, los elementos siguen el flujo normal de la página y no se ven afectados por propiedades como `top`, `left`, `right` o `bottom`.</p>
+
+        <h2>Posicionamiento Relativo (relative)</h2>
+        <p>Un elemento con `position: relative` se posiciona <span class="highlight">en relación a su posición original</span> en el flujo de la página. Los desplazamientos con `top`, `left`, `right` o `bottom` se aplican a partir de esta posición inicial.</p>
+
+        <h2>Posicionamiento Absoluto (absolute)</h2>
+        <p>El `position: absolute` permite ubicar un elemento <span class="highlight">en relación al elemento contenedor más cercano</span> que tenga `position: relative` o `absolute`. Si no hay un contenedor posicionado, se ubicará en relación al `body`.</p>
+
+        <h2>Posicionamiento Fijo (fixed)</h2>
+        <p>Con `position: fixed`, un elemento se ubica <span class="highlight">en una posición fija en la ventana</span> y no se moverá al hacer scroll. Es útil para menús o botones de navegación que deben permanecer visibles.</p>
+
+        <h2>Ejemplo Visual</h2>
+
+        <p>En la esquina superior derecha de la ventana, verás un ejemplo de `position: fixed` aplicado al botón.</p>
+
+        <a href="#inicio" class="boton">Explora más sobre CSS</a>
+    </div>
+
+    <!-- Elemento fijo -->
+    <div class="caja fijo">fixed</div>
+</body>
+</html>

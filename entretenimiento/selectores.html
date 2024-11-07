@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Selectores en CSS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #f3a683, #786fa6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #786fa6;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Resaltado de palabras clave */
+        .highlight {
+            color: #f3a683;
+            font-weight: bold;
+        }
+
+        /* Lista personalizada */
+        ul {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "👉";
+            color: #786fa6;
+            font-weight: bold;
+            position: absolute;
+            left: -25px;
+        }
+
+        /* Ejemplo de código */
+        .ejemplo {
+            background: #f0eef1;
+            padding: 15px;
+            border-left: 4px solid #786fa6;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #555;
+        }
+
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #f3a683;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #786fa6;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Selectores en CSS</h1>
+        <h2>Control Total de los Elementos HTML</h2>
+
+        <p>Los <span class="highlight">selectores</span> en CSS son fundamentales para aplicar estilos a elementos específicos en una página web. Nos permiten elegir uno o varios elementos HTML según diferentes criterios, como su etiqueta, clase, identificador, estado, o incluso su posición dentro de otros elementos.</p>
+
+        <h2>Tipos de Selectores</h2>
+        <p>Existen varios tipos de selectores en CSS, cada uno adecuado para diferentes casos de uso. A continuación, algunos de los selectores más comunes:</p>
+
+        <ul>
+            <li><span class="highlight">Selector de etiqueta</span>: Aplica estilos a todas las etiquetas de un tipo específico, como <code>p</code>, <code>h1</code>, etc.</li>
+            <li><span class="highlight">Selector de clase</span>: Aplica estilos a los elementos con una clase específica, utilizando el prefijo <code>.</code> (por ejemplo, <code>.clase</code>).</li>
+            <li><span class="highlight">Selector de ID</span>: Aplica estilos a un único elemento con un identificador único, utilizando el prefijo <code>#</code> (por ejemplo, <code>#id</code>).</li>
+            <li><span class="highlight">Selectores de atributo</span>: Aplica estilos a los elementos que tienen un atributo específico (por ejemplo, <code>[type="text"]</code>).</li>
+            <li><span class="highlight">Selectores combinados</span>: Permiten aplicar estilos a elementos en función de su posición o relación con otros elementos.</li>
+        </ul>
+
+        <h2>Ejemplos de Selectores</h2>
+
+        <div class="ejemplo">
+            <p>A continuación se presentan ejemplos básicos de selectores en CSS:</p>
+            <pre>
+/* Selector de etiqueta */
+p {
+    color: #786fa6;
+}
+
+/* Selector de clase */
+.destacado {
+    font-weight: bold;
+    color: #f3a683;
+}
+
+/* Selector de ID */
+#principal {
+    background-color: #f0eef1;
+    padding: 10px;
+}
+            </pre>
+        </div>
+
+        <h2>Combinar Selectores para Mayor Precisión</h2>
+        <p>Los selectores también se pueden combinar para aplicar estilos con más precisión. Algunos ejemplos de combinaciones son:</p>
+
+        <ul>
+            <li><span class="highlight">Selector descendiente</span>: Selecciona elementos dentro de otros elementos (por ejemplo, <code>div p</code>).</li>
+            <li><span class="highlight">Selector hijo</span>: Selecciona elementos que son hijos directos de otros elementos (por ejemplo, <code>div > p</code>).</li>
+            <li><span class="highlight">Selector de hermano adyacente</span>: Selecciona un elemento que sigue inmediatamente a otro (por ejemplo, <code>h1 + p</code>).</li>
+        </ul>
+
+        <a href="/index.html" class="boton">Explorar más</a>
+    </div>
+</body>
+</html>

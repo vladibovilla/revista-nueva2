@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Unión entre HTML y CSS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background-color: #ffffff;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Encabezados */
+        h1 {
+            color: #4a90e2;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin: 15px 0;
+        }
+
+        /* Estilos de columnas */
+        .columnas {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .column {
+            background-color: #e1eaf5;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            min-width: 280px;
+        }
+
+        .column h3 {
+            color: #4a90e2;
+            font-size: 1.5em;
+        }
+
+        .column p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Estilo del enlace */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #4a90e2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Unión entre HTML y CSS</h1>
+        <h2>Construyendo la web juntos</h2>
+        
+        <p>HTML y CSS forman un equipo poderoso en el desarrollo web, donde cada uno cumple un papel único y fundamental. Mientras HTML proporciona la estructura y el contenido de la página, CSS añade el estilo y la estética, creando una experiencia visual atractiva y coherente.</p>
+
+        <div class="columnas">
+            <div class="column">
+                <h3>HTML: La Estructura</h3>
+                <p>HTML, o HyperText Markup Language, es el lenguaje que usamos para definir la estructura y el contenido de una página web. A través de etiquetas, HTML organiza los diferentes elementos, como párrafos, imágenes y enlaces, formando el esqueleto del sitio.</p>
+            </div>
+
+            <div class="column">
+                <h3>CSS: El Estilo</h3>
+                <p>CSS, o Cascading Style Sheets, es el lenguaje que define el diseño visual de una página web. Con CSS, puedes modificar colores, fuentes, márgenes, y mucho más, transformando la estructura de HTML en una presentación atractiva y visualmente impactante.</p>
+            </div>
+        </div>
+
+        <h2>¿Cómo Trabajan Juntos?</h2>
+        <p>La conexión entre HTML y CSS es esencial para crear una página web completa y profesional. Mientras HTML define los elementos de la página, CSS selecciona y estiliza esos elementos, aplicando diseño y posicionamiento.</p>
+
+        <div class="columnas">
+            <div class="column">
+                <h3>Seleccionar y Aplicar Estilos</h3>
+                <p>Con selectores de CSS, puedes elegir qué elementos HTML estilizar. Por ejemplo, puedes usar etiquetas específicas como <code>&lt;h1&gt;</code>, clases, o identificadores para definir estilos particulares, permitiendo una personalización total.</p>
+            </div>
+
+            <div class="column">
+                <h3>Separación de Contenido y Diseño</h3>
+                <p>Al trabajar juntos, HTML y CSS mantienen el contenido y el estilo por separado. Esto facilita el mantenimiento y la actualización, ya que puedes cambiar el diseño sin modificar el contenido, y viceversa.</p>
+            </div>
+        </div>
+
+        <a href="/index.html" class="boton">Explora más sobre HTML y CSS</a>
+    </div>
+</body>
+</html>

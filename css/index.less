@@ -1,0 +1,99 @@
+@import url(./normalize.min.css);
+@import url(./variables.css);
+@import url(./fuentes.css);
+@import url(./mixins.less);
+html{
+	background-color: var(--primary-bg);
+	.hidden{
+		display: none;
+	}
+}
+header{
+	font-family: Arial, Helvetica, sans-serif;
+	.flexbox(column, center, center, no-wrap, var(--xl));
+	background-color: var(--primary-header);
+	padding: var(--xxxl);
+	#title{
+		font-family: "Rock Salt";
+	}
+	.buttons{
+		.flexbox(row, center, center, no-wrap, var(--l));
+		.btn{
+			outline-color: greenyellow;
+			outline-width: 2px;
+			background-color: var(--primary-header);
+			border: none;
+			text-decoration: none;
+			color: black;
+			padding: 8px;
+			border-radius: var(--xxxl);
+			cursor: pointer;
+		}
+	}
+	.dropdown{
+		position: absolute;
+		background-color: var(--primary-bg);
+		border-radius: var(--xxl);
+		margin: 230px 0 0 0;
+		min-width: 10rem;
+		overflow: auto;
+		box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+		.section{
+			text-align: center;
+			padding: 0.5rem;
+			text-decoration: none;
+			color: currentColor;
+			display: block;
+			&:visited{
+				text-decoration: none;
+				color: currentColor;
+			}
+			&:hover{
+				background-color: var(--primary-header)
+			}
+		}
+	}
+	.fade-in{
+		animation: fade-in 200ms;
+	}
+	@keyframes fade-in {
+		from {
+		  opacity: 0;
+		}
+		to {
+		  opacity: 1;
+		}
+	}
+}
+main{
+	.flexbox(row, unset, space-evenly, wrap, var(--xxxxxl));
+	background-color: var(--primary-bg);
+	padding: var(--xxxl) var(--xxxl) 0 var(--xxxl);
+	article{
+		box-shadow: 5px 5px 11px 1px rgb(0 0 0 / 51%);
+		width: 370px;
+		border: 1.5px solid;
+		background-color: var(--secondary-bg);
+		border-radius: var(--xl);
+		padding: var(--xxxl);
+		font-family: Arial, Helvetica, sans-serif;
+		img{
+			max-height: 200px;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 0 var(--xxl) 0 var(--xxl);
+		}
+		.section, .date{
+			color: var(--secondary-gray);
+			font-size: calc(0.9em);
+		}
+		a{
+			.flexbox(column, unset, unset, unset, var(--l));
+			text-decoration: none;
+			color: currentColor;
+		}:visited{
+			text-decoration: none;
+			color: currentColor;
+		}
+	}
+}

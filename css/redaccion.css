@@ -1,0 +1,108 @@
+@import url(normalize.min.css);
+@import url(variables.css);
+@import url(fuentes.css);
+html {
+  background-color: var(--primary-bg);
+}
+html .hidden {
+  display: none;
+}
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: no-wrap;
+  gap: var(--xl);
+  background-color: var(--primary-header);
+  padding: var(--xxxl);
+}
+header #title {
+  font-family: "Rock Salt";
+}
+header .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: no-wrap;
+  gap: var(--l);
+}
+header .buttons .btn {
+  outline-color: greenyellow;
+  outline-width: 2px;
+  background-color: var(--primary-header);
+  border: none;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  border-radius: var(--xxxl);
+  cursor: pointer;
+}
+header .dropdown {
+  position: absolute;
+  background-color: var(--primary-bg);
+  border-radius: var(--xxl);
+  margin: 230px 0 0 0;
+  min-width: 10rem;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+header .dropdown .section {
+  text-align: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: currentColor;
+  display: block;
+}
+header .dropdown .section:visited {
+  text-decoration: none;
+  color: currentColor;
+}
+header .dropdown .section:hover {
+  background-color: var(--primary-header);
+}
+header .fade-in {
+  animation: fade-in 200ms;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main {
+  background-color: var(--primary-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--xxxl);
+  padding: var(--xxl) 0 var(--xxl) 0;
+  font-family: JetBrains Mono;
+}
+main .equipo {
+  min-width: 18.75rem;
+  padding: var(--xxxl);
+  border-radius: var(--xxl);
+}
+main .equipo h3 {
+  margin-bottom: var(--xl);
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: center;
+  flex-wrap: unset;
+  gap: unset;
+  background-color: var(--primary-bg);
+}
+footer .github-logo {
+  width: 40px;
+  border-radius: 100%;
+}

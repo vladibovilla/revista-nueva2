@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Historia de CSS</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e1eaf5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #ffffff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            color: #4b77be;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Línea de tiempo */
+        .timeline {
+            border-left: 4px solid #4b77be;
+            margin-top: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            bottom: 0;
+            width: 16px;
+            background: #4b77be;
+            border-radius: 8px;
+        }
+
+        /* Elementos de la línea de tiempo */
+        .event {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .event h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #2980b9;
+        }
+
+        .event p {
+            margin: 5px 0 0;
+            color: #555;
+        }
+
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #4b77be;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #fff;
+        }
+        
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #2980b9;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            text-align: center;
+        }
+
+        .boton:hover {
+            background: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Historia de CSS</h1>
+        <h2>Desde sus inicios hasta la actualidad</h2>
+
+        <p>La evolución de CSS ha sido fundamental en el desarrollo de la web moderna, permitiéndonos lograr páginas visualmente atractivas y de fácil navegación. A continuación, revisaremos los principales hitos en la historia de CSS, desde su nacimiento hasta las innovaciones más recientes.</p>
+
+        <div class="timeline">
+            <div class="event">
+                <h3>1994 - Nacimiento de la idea de CSS</h3>
+                <p>Håkon Wium Lie propuso por primera vez la idea de un lenguaje de estilos para la web, que luego se convertiría en CSS. Esta propuesta surgió de la necesidad de separar el contenido HTML del diseño visual.</p>
+            </div>
+            <div class="event">
+                <h3>1996 - Lanzamiento de CSS1</h3>
+                <p>En diciembre de 1996, el W3C lanzó la primera versión oficial de CSS, conocida como CSS1. Este primer estándar permitía estilos básicos como colores, fuentes, y márgenes.</p>
+            </div>
+            <div class="event">
+                <h3>1998 - CSS2 y el soporte de navegadores</h3>
+                <p>CSS2 se publicó en 1998, agregando nuevas características como la capacidad de trabajar con capas, posicionamiento absoluto y tablas. Los navegadores comenzaron a mejorar el soporte de CSS, lo que ayudó a popularizar su uso.</p>
+            </div>
+            <div class="event">
+                <h3>2001 - El auge de CSS y la web más estilizada</h3>
+                <p>Con el aumento del soporte de CSS en los navegadores principales, el diseño web comenzó a enfocarse más en la apariencia y la usabilidad, sentando las bases para un desarrollo web más creativo y consistente.</p>
+            </div>
+            <div class="event">
+                <h3>2011 - Introducción de CSS3</h3>
+                <p>CSS3 trajo consigo importantes mejoras visuales, como transiciones, transformaciones, y animaciones. Esto permitió un diseño más dinámico y moderno, eliminando en muchos casos la necesidad de JavaScript para efectos simples.</p>
+            </div>
+            <div class="event">
+                <h3>2023 - CSS4 y el futuro del diseño web</h3>
+                <p>Aunque CSS4 aún está en desarrollo, sus conceptos están empezando a implementarse gradualmente. La evolución continúa con mejoras en rendimiento y nuevas capacidades visuales, asegurando un futuro flexible y creativo para el diseño web.</p>
+            </div>
+        </div>
+
+        <p>Con CSS, la web ha evolucionado de documentos simples a experiencias visuales y de interacción complejas, y el futuro promete aún más innovaciones.</p>
+
+        <a href="/entretenimiento/csse.html" class="boton">Conoce más sobre CSS</a>
+    </div>
+</body>
+</html>

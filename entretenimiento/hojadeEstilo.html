@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Hojas de Estilo</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(135deg, #2e86de, #48c6ef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+
+        /* Encabezado y título */
+        .contenido h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #2e86de;
+            margin-bottom: 10px;
+            animation: fadeInDown 1.5s;
+        }
+
+        .contenido h2 {
+            font-size: 1.8em;
+            color: #48c6ef;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeInDown 2s;
+        }
+
+        /* Animación de desvanecimiento */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Texto con resaltado */
+        .highlight {
+            color: #2e86de;
+            font-weight: bold;
+        }
+
+        /* Lista con estilo */
+        ul {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 1.1em;
+            margin: 8px 0;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #48c6ef;
+            font-weight: bold;
+            position: absolute;
+            left: -25px;
+        }
+
+        /* Bloques de citas o ejemplos */
+        .ejemplo {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2e86de;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Botón al final de la sección */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #2e86de;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #48c6ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Hojas de Estilo (CSS)</h1>
+        <h2>Potencia el Diseño de tu Sitio Web</h2>
+
+        <p>Las <span class="highlight">hojas de estilo</span> o <span class="highlight">CSS</span> (Cascading Style Sheets) son un lenguaje utilizado para definir y controlar la apariencia de los documentos HTML. Gracias a CSS, podemos transformar un simple texto en una experiencia visual atractiva, controlando elementos como los colores, las fuentes, el posicionamiento y mucho más.</p>
+
+        <h2>¿Por qué usar CSS?</h2>
+        <p>CSS permite separar el contenido de la estructura visual, logrando una web más <span class="highlight">mantenible y escalable</span>. Algunos de los beneficios de utilizar CSS son:</p>
+        
+        <ul>
+            <li>Control total sobre el diseño y la disposición del contenido.</li>
+            <li>Mejor rendimiento, ya que el diseño se carga en un solo archivo.</li>
+            <li>Estilo coherente en todas las páginas de un sitio web.</li>
+            <li>Mayor flexibilidad para realizar cambios visuales sin alterar el HTML.</li>
+        </ul>
+
+        <h2>Principales Componentes de CSS</h2>
+        <p>Al trabajar con CSS, se deben entender algunos componentes esenciales:</p>
+        
+        <ul>
+            <li><span class="highlight">Selectores:</span> Identifican el elemento o grupo de elementos que se desea estilizar.</li>
+            <li><span class="highlight">Propiedades:</span> Definen el estilo a aplicar, como el color, el tamaño de la fuente, el margen, etc.</li>
+            <li><span class="highlight">Valores:</span> Especifican cómo debe ser ese estilo, por ejemplo, <code>color: blue;</code>.</li>
+            <li><span class="highlight">Listas de declaraciones:</span> Un conjunto de reglas que aplican estilos a un elemento específico.</li>
+        </ul>
+
+        <h2>Ejemplo de CSS Básico</h2>
+        <div class="ejemplo">
+            <p>Veamos un ejemplo simple de CSS que cambia el color de fondo de un elemento y el tamaño de la fuente:</p>
+            <pre>
+body {
+    background-color: #f3f3f3;
+    font-size: 16px;
+}
+            </pre>
+        </div>
+
+        <h2>Cómo aplicar CSS en HTML</h2>
+        <p>Existen diferentes métodos para aplicar CSS a los documentos HTML:</p>
+        
+        <ul>
+            <li><span class="highlight">CSS en línea:</span> Utilizado directamente en un elemento HTML mediante el atributo <code>style</code>. Ejemplo: <code>&lt;p style="color: blue;"&gt;Texto Azul&lt;/p&gt;</code></li>
+            <li><span class="highlight">CSS Interno:</span> Definido dentro de la etiqueta <code>&lt;style&gt;</code> en el archivo HTML.</li>
+            <li><span class="highlight">CSS Externo:</span> Un archivo .css separado que se enlaza en el HTML, como <code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code>.</li>
+        </ul>
+
+        <a href="#inicio" class="boton">¡Explora más sobre CSS!</a>
+    </div>
+</body>
+</html>

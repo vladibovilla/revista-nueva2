@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Uso de &lt;hgroup&gt; en HTML</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f9ca24, #f0932b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #2d3436;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            color: #e17055;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Resaltado */
+        .highlight {
+            color: #f0932b;
+            font-weight: bold;
+        }
+
+        /* Lista de estilo */
+        ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "🔹";
+            color: #e17055;
+            font-weight: bold;
+            position: absolute;
+            left: -30px;
+        }
+
+        /* Ejemplo de código */
+        .ejemplo {
+            background: #dfe6e9;
+            padding: 15px;
+            border-left: 4px solid #e17055;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            color: #2d3436;
+        }
+
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #e17055;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #f0932b;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Uso de &lt;hgroup&gt; en HTML</h1>
+        <h2>Organización Jerárquica de Encabezados</h2>
+
+        <p>La etiqueta <span class="highlight">&lt;hgroup&gt;</span> en HTML se utiliza para agrupar varios encabezados relacionados jerárquicamente, indicando que forman una unidad. Es especialmente útil cuando un título y subtítulo representan una sección o tema en común.</p>
+
+        <h2>¿Cuándo Usar &lt;hgroup&gt;?</h2>
+        <p>La etiqueta <span class="highlight">&lt;hgroup&gt;</span> debe usarse cuando se quiere especificar que un conjunto de encabezados pertenecen a un mismo bloque de contenido. Aquí algunos casos comunes:</p>
+
+        <ul>
+            <li>Cuando un título principal tiene subtítulos de soporte.</li>
+            <li>Para mantener la semántica y accesibilidad del contenido.</li>
+            <li>En artículos, entradas de blogs, y secciones con múltiples encabezados.</li>
+        </ul>
+
+        <h2>Ejemplo Básico</h2>
+
+        <div class="ejemplo">
+            <pre>
+&lt;hgroup&gt;
+    &lt;h1&gt;Guía Completa de HTML&lt;/h1&gt;
+    &lt;h2&gt;Todo lo que necesitas saber sobre HTML5&lt;/h2&gt;
+&lt;/hgroup&gt;
+            </pre>
+        </div>
+
+        <p>En este ejemplo, el uso de <span class="highlight">&lt;hgroup&gt;</span> indica que el título principal "Guía Completa de HTML" y su subtítulo "Todo lo que necesitas saber sobre HTML5" están relacionados y forman un solo encabezado temático.</p>
+
+        <h2>Ejemplo Complejo</h2>
+
+        <div class="ejemplo">
+            <pre>
+&lt;hgroup&gt;
+    &lt;h1&gt;Desarrollo Web Moderno&lt;/h1&gt;
+    &lt;h2&gt;Tecnologías, herramientas y mejores prácticas&lt;/h2&gt;
+    &lt;h3&gt;Guía para 2024&lt;/h3&gt;
+&lt;/hgroup&gt;
+            </pre>
+        </div>
+
+        <p>En este ejemplo más complejo, el <span class="highlight">&lt;hgroup&gt;</span> agrupa un título principal y dos subtítulos adicionales, todos relacionados con el tema de "Desarrollo Web Moderno". Esto mejora la organización y estructura de la página.</p>
+
+        <a href="/index.html" class="boton">Explora más sobre HTML y CSS</a>
+    </div>
+</body>
+</html>

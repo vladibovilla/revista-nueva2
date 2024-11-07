@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada de Revista Digital</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body, html {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        /* Fondo y diseño de la portada */
+        .portada {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Elementos decorativos */
+        .circulo {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: flotar 8s ease-in-out infinite;
+        }
+
+        .circulo:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            left: 10%;
+        }
+
+        .circulo:nth-child(2) {
+            width: 600px;
+            height: 600px;
+            top: 60%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .circulo:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            top: 70%;
+            left: 20%;
+            animation-delay: 5s;
+        }
+
+        /* Animación de los elementos decorativos */
+        @keyframes flotar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Texto de la portada */
+        .portada h1 {
+            font-size: 4em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            animation: aparecer 2s ease-in-out forwards;
+        }
+
+        .portada h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: #f0f0f0;
+            opacity: 0;
+            animation: aparecer 3s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        /* Animación de aparición de texto */
+        @keyframes aparecer {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Botón de inicio */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+            background: #ff512f;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s;
+            opacity: 0;
+            animation: aparecer 3s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        .boton:hover {
+            background: #dd2476;
+        }
+    </style>
+</head>
+<body>
+    <div class="portada">
+        <!-- Elementos decorativos en el fondo -->
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+
+        <!-- Texto de la portada -->
+        <div>
+            <h1>Revista Digital</h1>
+            <h2>Hecho por Vladimir Bocaranda C.I 30.555.895</h2>
+            <a href="/index.html" class="boton">Descubre Más</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Futuro de la Programación Web</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            color: #e4e4e4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background-color: #2d2d2d;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        /* Animación de entrada */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Encabezados */
+        h1 {
+            color: #f44336;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #e4e4e4;
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        /* Estilos para bloques de contenido */
+        .bloque {
+            background-color: #3a3a3a;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .bloque h3 {
+            color: #f44336;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .bloque p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        /* Estilo del enlace */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #f44336;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>El Futuro de la Programación Web</h1>
+        <h2>Innovación y Nuevas Tendencias</h2>
+        
+        <p>La programación web está evolucionando a pasos agigantados, impulsada por nuevas tecnologías y enfoques que buscan mejorar la experiencia de usuario, la eficiencia y la accesibilidad en la web.</p>
+
+        <div class="bloque">
+            <h3>1. Inteligencia Artificial y Aprendizaje Automático</h3>
+            <p>La inteligencia artificial (IA) se está integrando en el desarrollo web para mejorar la personalización y el análisis predictivo. Desde asistentes virtuales hasta sistemas de recomendación, la IA está ampliando las posibilidades en la web.</p>
+        </div>
+
+        <div class="bloque">
+            <h3>2. Aplicaciones Web Progresivas (PWA)</h3>
+            <p>Las PWAs combinan lo mejor de las aplicaciones móviles y los sitios web, ofreciendo experiencias rápidas, fiables y atractivas, incluso sin conexión. Son cada vez más comunes y pueden convertirse en el estándar para muchas empresas.</p>
+        </div>
+
+        <div class="bloque">
+            <h3>3. Realidad Virtual (VR) y Realidad Aumentada (AR)</h3>
+            <p>La realidad virtual y aumentada están transformando la forma en que interactuamos con el contenido en línea, permitiendo experiencias inmersivas en sectores como el entretenimiento, el comercio y la educación.</p>
+        </div>
+
+        <div class="bloque">
+            <h3>4. Automatización y Desarrollo Sin Código</h3>
+            <p>Herramientas de desarrollo sin código y de bajo código están democratizando la creación de sitios web, permitiendo que personas sin conocimientos técnicos puedan construir y personalizar plataformas web rápidamente.</p>
+        </div>
+
+        <div class="bloque">
+            <h3>5. Web3 y Descentralización</h3>
+            <p>La web descentralizada o Web3 busca otorgar mayor control a los usuarios, utilizando tecnologías como blockchain para descentralizar la propiedad y mejorar la seguridad de la información.</p>
+        </div>
+
+        <a href="/index.html" class="boton">Volver</a>
+    </div>
+</body>
+</html>

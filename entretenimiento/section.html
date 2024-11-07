@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital - Uso de &lt;section&gt; en HTML</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #81ecec, #00cec9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #2d3436;
+        }
+
+        /* Contenedor principal */
+        .contenido {
+            background: #fff;
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* Encabezados */
+        h1, h2 {
+            text-align: center;
+            color: #00b894;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Resaltado */
+        .highlight {
+            color: #00cec9;
+            font-weight: bold;
+        }
+
+        /* Listas de estilo */
+        ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "📖";
+            color: #00b894;
+            font-weight: bold;
+            position: absolute;
+            left: -30px;
+        }
+
+        /* Ejemplo de código */
+        .ejemplo {
+            background: #dfe6e9;
+            padding: 15px;
+            border-left: 4px solid #00b894;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            color: #2d3436;
+        }
+
+        /* Botón */
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            color: #fff;
+            background: #00b894;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton:hover {
+            background: #81ecec;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <h1>Uso de &lt;section&gt; en HTML</h1>
+        <h2>Estructura y Organización del Contenido</h2>
+
+        <p>La etiqueta <span class="highlight">&lt;section&gt;</span> en HTML es un elemento estructural que se utiliza para dividir el contenido en secciones temáticas. Cada sección puede contener encabezados, párrafos, imágenes y otros elementos, organizando la página de forma lógica y clara.</p>
+
+        <h2>¿Cuándo Usar &lt;section&gt;?</h2>
+        <p>La etiqueta <span class="highlight">&lt;section&gt;</span> se recomienda para agrupar contenido que forma una unidad temática, como capítulos de un libro o artículos en una revista. A continuación, se presentan algunos casos en los que es útil:</p>
+
+        <ul>
+            <li>Dividir una página en diferentes temas o categorías.</li>
+            <li>Agrupar elementos relacionados bajo un mismo encabezado.</li>
+            <li>Facilitar la navegación y mejorar la accesibilidad de la página.</li>
+        </ul>
+
+        <h2>Ejemplo Básico</h2>
+
+        <div class="ejemplo">
+            <pre>
+&lt;section&gt;
+    &lt;h2&gt;Noticias Recientes&lt;/h2&gt;
+    &lt;p&gt;Aquí encontrarás las noticias más actuales del día.&lt;/p&gt;
+&lt;/section&gt;
+            </pre>
+        </div>
+
+        <p>En este ejemplo, la etiqueta <span class="highlight">&lt;section&gt;</span> agrupa una subsección de "Noticias Recientes" con su encabezado y contenido, lo cual facilita la organización visual y semántica de la página.</p>
+
+        <h2>Ejemplo Complejo</h2>
+
+        <div class="ejemplo">
+            <pre>
+&lt;section&gt;
+    &lt;h2&gt;Capítulo 1: Introducción a HTML&lt;/h2&gt;
+    &lt;p&gt;HTML es el lenguaje de marcado utilizado para estructurar una página web.&lt;/p&gt;
+    &lt;section&gt;
+        &lt;h3&gt;Elementos Básicos&lt;/h3&gt;
+        &lt;p&gt;Los elementos de HTML son la base de cualquier documento web.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/section&gt;
+            </pre>
+        </div>
+
+        <p>En este ejemplo, vemos el uso de una sección principal que contiene un encabezado de capítulo, y dentro de ella, una subsección con contenido específico sobre los elementos básicos de HTML.</p>
+
+        <a href="/index.html" class="boton">Seguir aprendiendo</a>
+    </div>
+</body>
+</html>
